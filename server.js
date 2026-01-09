@@ -4,7 +4,7 @@ import fetch from "node-fetch";
 const app = express();
 const PORT = 3000;
 
-const RUGPLAY_KEY = "process.env.RUGPLAY_KEY";
+const RUGPLAY_KEY = process.env.RUGPLAY_KEY;
 
 app.get("/api/coin/:symbol", async (req, res) => {
   const { symbol } = req.params;
