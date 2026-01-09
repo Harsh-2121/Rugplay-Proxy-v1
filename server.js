@@ -10,6 +10,8 @@ app.get("/api/coin/:symbol", async (req, res) => {
   const { symbol } = req.params;
   const timeframe = req.query.timeframe || "1m";
 
+  console.log("RUGPLAY_KEY length:", RUGPLAY_KEY?.length);
+
   try {
     const response = await fetch(
       `https://rugplay.com/api/v1/coin/${symbol}?timeframe=${timeframe}`,
